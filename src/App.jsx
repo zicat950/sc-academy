@@ -3,7 +3,9 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import About from "./About";
 import Courses from "./Courses";
+
 import Contact from "./Contact";
+import Webinar from "./Webinar";
 import "./App.css";
 
 // Home = one long scrolling page: Hero + the other sections stacked.
@@ -20,6 +22,9 @@ function HomePage() {
       <section id="courses" data-nav-section="courses">
         <Courses />
       </section>
+      <section id="webinar" data-nav-section="webinar">
+        <Webinar />
+      </section>
       <section id="contact" data-nav-section="contact">
         <Contact />
       </section>
@@ -35,6 +40,7 @@ function Shell() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/webinar" element={<Webinar />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
@@ -47,7 +53,7 @@ export default function App() {
   return inRouter ? (
     <Shell />
   ) : (
-    <BrowserRouter>
+    <BrowserRouter basename="/sc-academy">
       <Shell />
     </BrowserRouter>
   );

@@ -21,6 +21,7 @@ const NAV_ITEMS = [
   { key: "home", label: "Home", to: "/" },
   { key: "about", label: "About", to: "/about" },
   { key: "courses", label: "Courses", to: "/courses" },
+  { key: "webinar", label: "Webinar", to: "/webinar" },
   { key: "contact", label: "Contact", to: "/contact" },
 ];
 
